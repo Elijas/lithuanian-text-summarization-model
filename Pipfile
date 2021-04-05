@@ -6,6 +6,9 @@ name = "pypi"
 [packages]
 streamlit = "*"
 torch = "*"
+sentencepiece = "*"
+fairseq = "*"
+
 
 [dev-packages]
 
