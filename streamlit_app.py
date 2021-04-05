@@ -18,7 +18,7 @@ bart.eval()
 #===========================================#
 
 def summarize(full_text):
-    summarized_text = bart.sample(full_text, beam=4, lenpen=2.0, max_len_b=140, min_len=55, no_repeat_ngram_size=3)
+    summarized_text = bart.sample([full_text], beam=4, lenpen=2.0, max_len_b=140, min_len=55, no_repeat_ngram_size=3)
     return summarized_text
 
 #===========================================#
