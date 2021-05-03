@@ -22,7 +22,7 @@ def get_model():
 #===========================================#
 
 def summarize(full_text):
-    summarized_text = get_model().sample([full_text], beam=5, lenpen=2.0, max_len_b=140, min_len=30, no_repeat_ngram_size=3)
+    summarized_text = get_model().sample([full_text], beam=7, lenpen=2.0, max_len_b=140, min_len=30, no_repeat_ngram_size=3)
     return summarized_text
 
 #===========================================#
