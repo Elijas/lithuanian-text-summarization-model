@@ -28,7 +28,7 @@ def summarize(full_text):
 #===========================================#
 #              Streamlit Code               #
 #===========================================#
-desc = "Ši programa gali apibendrinti jūsų pateiktą lietuvišką tekstą."
+desc = "Ši programa gali apibendrinti jūsų pateiktą lietuvišką tekstą.\n Autorius: Robert Tarasevič, 2021"
 
 st.title('Lietuviško teksto automatinis apibendrinimas')
 st.write(desc)
