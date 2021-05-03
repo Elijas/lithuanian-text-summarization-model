@@ -14,5 +14,5 @@ pipenv run streamlit run streamlit_app.py
 Paleisti tam tikram port'e:
 
 ```bash
-pipenv run streamlit run streamlit_app.py --server.port 80
+python -m streamlit run streamlit_app.py --server.port 80
 ```
