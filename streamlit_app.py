@@ -29,7 +29,9 @@ def summarize(full_text):
 #              Streamlit Code               #
 #===========================================#
 desc = "Ši programa gali apibendrinti jūsų pateiktą lietuvišką tekstą."
-authr = "Autorius: VGTU FMF katedros studentas Robert Tarasevič, tsf-17, 2021"
+authr = "Autorius: Robert Tarasevič, 2021"
+uni = "VGTU FMF katedros studentas, grupė: TSF-17"
+
 st.title('Lietuviško teksto automatinis apibendrinimas')
 st.write(desc)
 st.write(authr)
