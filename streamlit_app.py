@@ -35,6 +35,7 @@ uni = "VGTU FMF katedros studentas, grupė: TSF-17"
 st.title('Lietuviško teksto automatinis apibendrinimas')
 st.write(desc)
 st.write(authr)
+st.write(uni)
 
 #user_input = st.text_input('Jūsų tekstas:')
 user_input = st.text_area(label='Jūsų tekstas:', height=200)
