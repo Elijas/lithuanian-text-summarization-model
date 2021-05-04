@@ -29,15 +29,16 @@ def summarize(full_text):
 #              Streamlit Code               #
 #===========================================#
 desc = "Ši programa gali apibendrinti jūsų pateiktą lietuvišką tekstą."
-authr = "Autorius: Robert Tarasevič, 2021"
+authr = "Autorius: VGTU FMF katedros studentas Robert Tarasevič, tsf-17, 2021"
 st.title('Lietuviško teksto automatinis apibendrinimas')
 st.write(desc)
 st.write(authr)
 
 #user_input = st.text_input('Jūsų tekstas:')
 user_input = st.text_area(label='Jūsų tekstas:', height=200)
+inp = " ".join(user_input.split(" ")[:600])
 
 if st.button('Apibendrinti'):
-    summarized_text = summarize(user_input[:600])[0][:-7]
+    summarized_text = summarize(inp)[0][:-7]
 #    st.write(summarized_text)
     st.text_area(label='Įvesto teksto santrauka:', value=summarized_text, height=100)
