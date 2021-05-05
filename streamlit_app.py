@@ -59,10 +59,10 @@ user_input = st.text_area(label='Įveskite savo tekstą:', value=initial_inp, he
 inp = " ".join(user_input.split(" ")[:550])
 
 
-
-st.text_area(label='Įvesto teksto santrauka:', value=initial_out, height=100)
-
 if st.button('Apibendrinti'):
     summarized_text = summarize(inp)[0][:-7]
 #    st.write(summarized_text)
     st.text_area(label='Įvesto teksto santrauka:', value=summarized_text, height=100)
+    
+else:
+    st.text_area(label='Įvesto teksto santrauka:', value=initial_out, height=100)
