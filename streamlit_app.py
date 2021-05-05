@@ -36,6 +36,7 @@ st.title('Lietuviško teksto automatinis apibendrinimas')
 st.write(desc)
 st.write(authr)
 st.write(uni)
+
 initial_inp = """Ryškiausia Paryžiaus įžymybė – 1889 metais pastatytas Eifelio bokštas, esantis Champ de Mars (Marso laukai) parke. 324 metrų aukščio metalinė konstrukcija yra vienas lankomiausių mokamų objektų pasaulyje, kiekvienais metais pritraukiantis milijonus turistų.
 Eifelio bokštas pavadintas inžinieriaus Gustavo Eifelio garbei, kurio įmonė suprojektavo ir pastatė bokštą 1889 metais rengtai Pasaulio parodai. Iki pat 1930 metų tai buvo didžiausias statinys pasaulyje, kol jį nukarūnavo Niujorke pastatytas Chrysler Building dangoraižis. Tuo metu bokšto niekas nenorėjo pripažinti, buvo teigiama, kad jis bjaurojo Paryžiaus veidą, tačiau jo taip ir niekas nenugriovė, o laikui bėgant tapo ne tik miesto, bet ir visos šalies simboliu.
 
@@ -51,11 +52,15 @@ Nepaisant didelio aukščio, montavimo metu žuvo tik vienas žmogus.
 
 1912 metais austrų kilmės siuvėjas bei parašiutizmo pradininkas Franz Reichelt norėdamas išbandyti savo sukurtą parašiutą nušoko nuo Eifelio bokšto pirmojo aukšto. Deja, jo bandymas buvo nesėkmingas – išradėjas per 5 sekundes nukrito ant žemės ir užsimušė (pagal kitus šaltinius – mirties priežastis buvo širdies smūgis kritimo eigoje)."""
 
-summarized_text = """Paryžiaus simboliu tapęs Eifelio bokštas, esantis Champ de Mars (Marso laukai) parke, yra ne tik vienas lankomiausių objektų pasaulyje, bet ir simbolinis simbolis, pritraukiantis milijonus turistų iš viso pasaulio, rašoma pranešime spaudai."""
+initial_out = """Paryžiaus simboliu tapęs Eifelio bokštas, esantis Champ de Mars (Marso laukai) parke, yra ne tik vienas lankomiausių objektų pasaulyje, bet ir simbolinis simbolis, pritraukiantis milijonus turistų iš viso pasaulio, rašoma pranešime spaudai."""
 
 #user_input = st.text_input('Jūsų tekstas:')
-user_input = st.text_area(label='Jūsų tekstas:', value=initial_inp, height=200)
+user_input = st.text_area(label='Įveskite savo tekstą:', value=initial_inp, height=200)
 inp = " ".join(user_input.split(" ")[:550])
+
+
+
+st.text_area(label='Įvesto teksto santrauka:', value=initial_out, height=100)
 
 if st.button('Apibendrinti'):
     summarized_text = summarize(inp)[0][:-7]
