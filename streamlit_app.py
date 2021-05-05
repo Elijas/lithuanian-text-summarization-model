@@ -22,7 +22,7 @@ def get_model():
 #===========================================#
 
 def summarize(full_text):
-    summarized_text = get_model().sample([full_text], beam=7, lenpen=2.0, max_len_b=140, min_len=30, no_repeat_ngram_size=3)
+    summarized_text = get_model().sample([full_text], beam=7, lenpen=2.0, max_len_b=140, min_len=40, no_repeat_ngram_size=3)
     return summarized_text
 
 #===========================================#
@@ -39,7 +39,7 @@ st.write(uni)
 
 #user_input = st.text_input('Jūsų tekstas:')
 user_input = st.text_area(label='Jūsų tekstas:', height=200)
-inp = " ".join(user_input.split(" ")[:600])
+inp = " ".join(user_input.split(" ")[:550])
 
 if st.button('Apibendrinti'):
     summarized_text = summarize(inp)[0][:-7]
