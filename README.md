@@ -1,3 +1,5 @@
+![image](https://user-images.githubusercontent.com/4084885/117797265-7d100480-b258-11eb-8d22-5f764312e70a.png)
+
 Paruošt aplinką:
 
 ```bash
